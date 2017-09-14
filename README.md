@@ -1,6 +1,6 @@
-# Genesis Starter Theme
+# Eurostar Theme Theme
 
-A search engine optimized, mobile-first, flexbox-based starter theme for the Genesis Framework with a modern development workflow. Demo - [https://demo.seothemes.com/genesis-starter](https://demo.seothemes.com/genesis-starter)
+A search engine optimized, mobile-first, flexbox-based starter theme for the Genesis Framework with a modern development workflow. Demo - [https://demo.seothemes.com/eurostar](https://demo.seothemes.com/eurostar)
 
 
 ![Screenshot](https://s3-us-west-1.amazonaws.com/seo-themes/screenshot.png)
@@ -35,7 +35,7 @@ A search engine optimized, mobile-first, flexbox-based starter theme for the Gen
 ## Installation
 
 1. Upload and install Genesis
-2. Upload, install and activate Genesis Starter
+2. Upload, install and activate Eurostar Theme
 3. Install and activate recommended plugins
 4. *Important* Delete unwanted existing posts, pages, comments & widgets
 5. Import sample.xml from Tools > Import
@@ -46,9 +46,9 @@ A search engine optimized, mobile-first, flexbox-based starter theme for the Gen
 
 The following instructions require the use of a text editor with search and replace functionality. You will need to perform a search and replace on all files in the theme folder. If using NPM, the theme should be renamed before running `npm install`. You do not want to edit any files in the `node_modules` directory.
 
-1. Search and replace `genesis-starter` with your theme text domain.
-2. Search and replace `starter_` with your theme function prefix.
-3. Search and replace `Genesis Starter` with your theme name.
+1. Search and replace `eurostar` with your theme text domain.
+2. Search and replace `eurostar_` with your theme function prefix.
+3. Search and replace `Eurostar Theme` with your theme name.
 
 
 ## Customization
@@ -86,7 +86,7 @@ theme/
 │   ├── helpers.php
 │   └── plugins.php
 ├── languages/
-│   └── genesis-starter.pot
+│   └── eurostar.pot
 ├── templates/
 │   ├── page-landing.php
 │   └── page-builder.php
@@ -107,7 +107,7 @@ theme/
 
 ## Development
 
-Genesis Starter uses [Gulp](http://gulpjs.com/) as a build tool and [npm](https://www.npmjs.com/) to manage front-end packages.
+Eurostar Theme uses [Gulp](http://gulpjs.com/) as a build tool and [npm](https://www.npmjs.com/) to manage front-end packages.
 
 ### Install dependencies
 

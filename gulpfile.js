@@ -1,9 +1,9 @@
 //process.env.DISABLE_NOTIFIER = true; // Uncomment to disable all Gulp notifications.
 
 /**		
- * Genesis Starter.		
+ * Eurostar Theme.
  *		
- * This file adds gulp tasks to the Genesis Starter theme.		
+ * This file adds gulp tasks to the Eurostar Theme theme.
  *		
  * @author Seo themes		
  */
@@ -352,9 +352,9 @@ gulp.task( 'i18n', function() {
 	.pipe( sort() )
 
 	.pipe( wpPot( {
-		domain: 'genesis-starter',
-		destFile:'genesis-starter.pot',
-		package: 'Genesis Starter',
+		domain: 'eurostar',
+		destFile:'eurostar.pot',
+		package: 'Eurostar Theme',
 		bugReport: 'https://seothemes.com/support',
 		lastTranslator: 'Lee Anthony <seothemeswp@gmail.com>',
 		team: 'Seo Themes <seothemeswp@gmail.com>'
@@ -384,7 +384,7 @@ gulp.task( 'zip', function() {
  */
 gulp.task( 'publish', function() {
 
-	gulp.src( '../genesis-starter.zip' )
+	gulp.src( '../eurostar.zip' )
 		.pipe( s3( aws ) );
 
 } );
@@ -398,19 +398,19 @@ gulp.task( 'watch', function() {
 
 	// HTTPS (optional).
 	browsersync( {
-		proxy: 'https://genesis-starter.dev',
+		proxy: 'https://eurostar.dev',
 		port: 8000,
 		notify: false,
 		open: false,
 		https: {
-			"key": "/Users/seothemes/.valet/Certificates/genesis-starter.dev.key",
-			"cert": "/Users/seothemes/.valet/Certificates/genesis-starter.dev.crt"
+			"key": "/Users/seothemes/.valet/Certificates/eurostar.dev.key",
+			"cert": "/Users/seothemes/.valet/Certificates/eurostar.dev.crt"
 		}
 	} );
 
 	// Non HTTPS.
 	//  browsersync( {
-	// 	    proxy: 'genesis-starter.dev',
+	// 	    proxy: 'eurostar.dev',
 	// 	    notify: false,
 	// 	    open: false,
 	//  } );

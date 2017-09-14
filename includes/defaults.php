@@ -1,9 +1,9 @@
 <?php
 /**
- * This file registers the required plugins for the Genesis Starter theme.
+ * This file registers the required plugins for the Eurostar Theme theme.
  *
- * @package      Genesis Starter
- * @link         https://seothemes.com/themes/genesis-starter
+ * @package      Eurostar Theme
+ * @link         https://seothemes.com/themes/eurostar
  * @author       Seo Themes
  * @copyright    Copyright © 2017 Seo Themes
  * @license      GPL-2.0+
@@ -16,14 +16,14 @@ if ( ! defined( 'WPINC' ) ) {
 
 }
 
-add_filter( 'genesis_theme_settings_defaults', 'starter_theme_defaults' );
+add_filter( 'genesis_theme_settings_defaults', 'eurostar_theme_defaults' );
 /**
  * Update Theme Settings upon reset.
  *
  * @param  array $defaults Default theme settings.
  * @return array Custom theme settings.
  */
-function starter_theme_defaults( $defaults ) {
+function eurostar_theme_defaults( $defaults ) {
 
 	$defaults['blog_cat_num']              = 6;
 	$defaults['content_archive']           = 'excerpt';
@@ -38,11 +38,11 @@ function starter_theme_defaults( $defaults ) {
 
 }
 
-add_action( 'after_switch_theme', 'starter_theme_setting_defaults' );
+add_action( 'after_switch_theme', 'eurostar_theme_setting_defaults' );
 /**
  * Update Theme Settings upon activation.
  */
-function starter_theme_setting_defaults() {
+function eurostar_theme_setting_defaults() {
 
 	if ( function_exists( 'genesis_update_settings' ) ) {
 
@@ -63,14 +63,14 @@ function starter_theme_setting_defaults() {
 
 }
 
-add_filter( 'simple_social_default_styles', 'starter_social_default_styles' );
+add_filter( 'simple_social_default_styles', 'eurostar_social_default_styles' );
 /**
  * Starter Pro Simple Social Icon Defaults.
  *
  * @param  array $defaults Default Simple Social Icons settings.
  * @return array Custom settings.
  */
-function starter_social_default_styles( $defaults ) {
+function eurostar_social_default_styles( $defaults ) {
 
 	$args = array(
 		'alignment'              => 'alignleft',
@@ -98,7 +98,7 @@ function starter_social_default_styles( $defaults ) {
 
 }
 
-add_action( 'after_switch_theme', 'starter_excerpt_metabox' );
+add_action( 'after_switch_theme', 'eurostar_excerpt_metabox' );
 /**
  * Display excerpt metabox by default.
  *
@@ -115,7 +115,7 @@ add_action( 'after_switch_theme', 'starter_excerpt_metabox' );
  *
  * @return void
  */
-function starter_excerpt_metabox() {
+function eurostar_excerpt_metabox() {
 
 	// Get current user ID.
 	$user_id = get_current_user_id();

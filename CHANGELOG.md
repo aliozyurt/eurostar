@@ -1,4 +1,4 @@
-# Genesis Starter Theme Changelog
+# Eurostar Theme Theme Changelog
 
 ## [2.2.1] - 2017-09-11
 * Add structural wrap hooks function

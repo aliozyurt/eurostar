@@ -1,11 +1,11 @@
 <?php
 /**
- * Genesis Starter.
+ * Eurostar Theme.
  *
- * This file adds page header to the Genesis Starter theme.
+ * This file adds page header to the Eurostar Theme theme.
  *
- * @package      Genesis Starter
- * @link         https://seothemes.com/themes/genesis-starter
+ * @package      Eurostar Theme
+ * @link         https://seothemes.com/themes/eurostar
  * @author       Seo Themes
  * @copyright    Copyright © 2017 Seo Themes
  * @license      GPL-2.0+
@@ -31,15 +31,15 @@ remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description'
 remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
 
 // Add custom titles.
-add_action( 'genesis_after_header', 'starter_page_header_open', 20 );
-add_action( 'genesis_after_header', 'starter_page_header_title', 24 );
+add_action( 'genesis_after_header', 'eurostar_page_header_open', 20 );
+add_action( 'genesis_after_header', 'eurostar_page_header_title', 24 );
 add_action( 'genesis_after_header', 'genesis_do_posts_page_heading', 24 );
 add_action( 'genesis_after_header', 'genesis_do_date_archive_title', 24 );
 add_action( 'genesis_after_header', 'genesis_do_blog_template_heading', 24 );
 add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description', 24 );
 add_action( 'genesis_after_header', 'genesis_do_author_title_description', 24 );
 add_action( 'genesis_after_header', 'genesis_do_cpt_archive_title_description', 24 );
-add_action( 'genesis_after_header', 'starter_page_header_close', 28 );
+add_action( 'genesis_after_header', 'eurostar_page_header_close', 28 );
 
 // Remove search results and shop page titles.
 add_filter( 'woocommerce_show_page_title', '__return_null' );
@@ -52,7 +52,7 @@ add_filter( 'genesis_search_title_output', '__return_false' );
  *
  * @return void
  */
-function starter_page_header_open() {
+function eurostar_page_header_open() {
 
 	echo '<section class="page-header" role="banner"><div class="wrap">';
 
@@ -65,7 +65,7 @@ function starter_page_header_open() {
  *
  * @return void
  */
-function starter_page_header_close() {
+function eurostar_page_header_close() {
 
 	echo '</div></section>';
 
@@ -78,7 +78,7 @@ function starter_page_header_close() {
  *
  * @return void
  */
-function starter_page_header_title() {
+function eurostar_page_header_title() {
 
 	// Add post titles back inside posts loop.
 	if ( is_home() || is_archive() || is_category() || is_tag() || is_tax() || is_search() || is_page_template( 'page_blog.php' ) ) {
@@ -93,15 +93,15 @@ function starter_page_header_title() {
 
 	} elseif ( 'posts' === get_option( 'show_on_front' ) && is_home() ) {
 
-		printf( '<h1 itemprop="headline">%s</h1>', esc_html( apply_filters( 'starter_latest_posts_title', __( 'Latest Posts', 'genesis-starter' ) ) ) );
+		printf( '<h1 itemprop="headline">%s</h1>', esc_html( apply_filters( 'eurostar_latest_posts_title', __( 'Latest Posts', 'eurostar' ) ) ) );
 
 	} elseif ( is_404() ) {
 
-		printf( '<h1 itemprop="headline">%s</h1>', esc_html( apply_filters( 'genesis_404_entry_title', __( 'Not found, error 404', 'genesis-starter' ) ) ) );
+		printf( '<h1 itemprop="headline">%s</h1>', esc_html( apply_filters( 'genesis_404_entry_title', __( 'Not found, error 404', 'eurostar' ) ) ) );
 
 	} elseif ( is_search() ) {
 
-		printf( '<h1 itemprop="headline">%s %s</h1></div>', apply_filters( 'genesis_search_title_text', __( 'Search Results for:', 'genesis-starter' ) ), get_search_query() );
+		printf( '<h1 itemprop="headline">%s %s</h1></div>', apply_filters( 'genesis_search_title_text', __( 'Search Results for:', 'eurostar' ) ), get_search_query() );
 
 	} elseif ( is_single() || is_singular() ) {
 

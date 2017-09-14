@@ -1,22 +1,22 @@
 <?php
 /**
- * Genesis Starter.
+ * Eurostar Theme.
  *
- * This file adds the front page to the Genesis Starter Theme.
+ * This file adds the front page to the Eurostar Theme Theme.
  *
- * @package Genesis Starter
+ * @package Eurostar Theme
  * @author  SeoThemes
  * @license GPL-2.0+
- * @link    https://seothemes.com/themes/genesis-starter/
+ * @link    https://seothemes.com/themes/eurostar/
  */
 
 // Force full-width-content layout.
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 // Remove default page header.
-remove_action( 'genesis_after_header', 'starter_page_header_open', 20 );
-remove_action( 'genesis_after_header', 'starter_page_header_title', 24 );
-remove_action( 'genesis_after_header', 'starter_page_header_close', 28 );
+remove_action( 'genesis_after_header', 'eurostar_page_header_open', 20 );
+remove_action( 'genesis_after_header', 'eurostar_page_header_title', 24 );
+remove_action( 'genesis_after_header', 'eurostar_page_header_close', 28 );
 
 // Remove content-sidebar-wrap.
 add_filter( 'genesis_markup_content-sidebar-wrap', '__return_null' );
@@ -24,13 +24,13 @@ add_filter( 'genesis_markup_content-sidebar-wrap', '__return_null' );
 // Remove default loop.
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
-add_action( 'genesis_loop', 'starter_front_page_loop' );
+add_action( 'genesis_loop', 'eurostar_front_page_loop' );
 /**
  * Front page content.
  *
  * @return void
  */
-function starter_front_page_loop() {
+function eurostar_front_page_loop() {
 
 	// Check if any front page widgets are active.
 	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' ) ) {

@@ -1,9 +1,9 @@
 <?php
 /**
- * This file adds helper functions used in the Genesis Starter Theme.
+ * This file adds helper functions used in the Eurostar Theme Theme.
  *
- * @package      Genesis Starter
- * @link         https://seothemes.com/themes/genesis-starter
+ * @package      Eurostar Theme
+ * @link         https://seothemes.com/themes/eurostar
  * @author       Seo Themes
  * @copyright    Copyright © 2017 Seo Themes
  * @license      GPL-2.0+
@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 }
 
-add_filter( 'body_class', 'starter_fixed_header_class' );
+add_filter( 'body_class', 'eurostar_fixed_header_class' );
 /**
  * Add fixed header class.
  *
@@ -27,7 +27,7 @@ add_filter( 'body_class', 'starter_fixed_header_class' );
  * @param  array $classes Body classes.
  * @return array
  */
-function starter_fixed_header_class( $classes ) {
+function eurostar_fixed_header_class( $classes ) {
 
 	if ( current_theme_supports( 'fixed-header' ) ) {
 
@@ -39,7 +39,7 @@ function starter_fixed_header_class( $classes ) {
 
 }
 
-add_filter( 'genesis_attr_title-area', 'starter_title_area_schema' );
+add_filter( 'genesis_attr_title-area', 'eurostar_title_area_schema' );
 /**
  * Add schema microdata to title-area.
  *
@@ -47,7 +47,7 @@ add_filter( 'genesis_attr_title-area', 'starter_title_area_schema' );
  * @param  array $attr Array of attributes.
  * @return array
  */
-function starter_title_area_schema( $attr ) {
+function eurostar_title_area_schema( $attr ) {
 
 	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/Organization';
@@ -56,7 +56,7 @@ function starter_title_area_schema( $attr ) {
 
 }
 
-add_filter( 'genesis_attr_site-title', 'starter_site_title_schema' );
+add_filter( 'genesis_attr_site-title', 'eurostar_site_title_schema' );
 /**
  * Correct site title schema.
  *
@@ -64,14 +64,14 @@ add_filter( 'genesis_attr_site-title', 'starter_site_title_schema' );
  * @param  array $attr Array of attributes.
  * @return array
  */
-function starter_site_title_schema( $attr ) {
+function eurostar_site_title_schema( $attr ) {
 
 	$attr['itemprop'] = 'name';
 
 	return $attr;
 }
 
-add_filter( 'theme_page_templates', 'starter_remove_templates' );
+add_filter( 'theme_page_templates', 'eurostar_remove_templates' );
 /**
  * Remove Page Templates.
  *
@@ -82,7 +82,7 @@ add_filter( 'theme_page_templates', 'starter_remove_templates' );
  * @param  array $page_templates All page templates.
  * @return array Modified templates.
  */
-function starter_remove_templates( $page_templates ) {
+function eurostar_remove_templates( $page_templates ) {
 
 	unset( $page_templates['page_archive.php'] );
 	unset( $page_templates['page_blog.php'] );
@@ -91,7 +91,7 @@ function starter_remove_templates( $page_templates ) {
 
 }
 
-add_action( 'genesis_admin_before_metaboxes', 'starter_remove_metaboxes' );
+add_action( 'genesis_admin_before_metaboxes', 'eurostar_remove_metaboxes' );
 /**
  * Remove blog metabox.
  *
@@ -101,15 +101,15 @@ add_action( 'genesis_admin_before_metaboxes', 'starter_remove_metaboxes' );
  *
  * @param string $hook The metabox hook.
  */
-function starter_remove_metaboxes( $hook ) {
+function eurostar_remove_metaboxes( $hook ) {
 
 	remove_meta_box( 'genesis-theme-settings-blogpage', $hook, 'main' );
 
 }
 
-add_filter( 'excerpt_more', 'starter_read_more' );
-add_filter( 'the_content_more_link', 'starter_read_more' );
-add_filter( 'get_the_content_more_link', 'starter_read_more' );
+add_filter( 'excerpt_more', 'eurostar_read_more' );
+add_filter( 'the_content_more_link', 'eurostar_read_more' );
+add_filter( 'get_the_content_more_link', 'eurostar_read_more' );
 /**
  * Accessible read more link.
  *
@@ -122,7 +122,7 @@ add_filter( 'get_the_content_more_link', 'starter_read_more' );
  *
  * @return string
  */
-function starter_read_more() {
+function eurostar_read_more() {
 
 	return sprintf( '&hellip; <a href="%s" class="more-link">%s</a>',
 		get_the_permalink(),
@@ -172,7 +172,7 @@ function sanitize_rgba_color( $color ) {
  * @param  string $css The CSS to minify.
  * @return string Minified CSS.
  */
-function starter_minify_css( $css ) {
+function eurostar_minify_css( $css ) {
 
 	// Normalize whitespace.
 	$css = preg_replace( '/\s+/', ' ', $css );
@@ -208,7 +208,7 @@ function starter_minify_css( $css ) {
 
 }
 
-add_action( 'wp_head', 'starter_remove_ssi_inline_styles', 1 );
+add_action( 'wp_head', 'eurostar_remove_ssi_inline_styles', 1 );
 /**
  * Remove Simple Social Icons inline CSS.
  *
@@ -218,7 +218,7 @@ add_action( 'wp_head', 'starter_remove_ssi_inline_styles', 1 );
  *
  * @return void
  */
-function starter_remove_ssi_inline_styles() {
+function eurostar_remove_ssi_inline_styles() {
 
 	global $wp_widget_factory;
 
@@ -226,7 +226,7 @@ function starter_remove_ssi_inline_styles() {
 
 }
 
-add_action( 'wp_head', 'starter_simple_social_icons_css' );
+add_action( 'wp_head', 'eurostar_simple_social_icons_css' );
 /**
  * Simple Social Icons multiple instances workaround.
  *
@@ -237,7 +237,7 @@ add_action( 'wp_head', 'starter_simple_social_icons_css' );
  *
  * @return void
  */
-function starter_simple_social_icons_css() {
+function eurostar_simple_social_icons_css() {
 
 	if ( ! class_exists( 'Simple_Social_Icons_Widget' ) ) {
 
@@ -275,7 +275,7 @@ function starter_simple_social_icons_css() {
 		}';
 
 		// Minify.
-		$css = starter_minify_css( $css );
+		$css = eurostar_minify_css( $css );
 
 		// Output.
 		printf( '<style type="text/css" media="screen">%s</style>', $css );
@@ -290,7 +290,7 @@ function starter_simple_social_icons_css() {
  * @link   https://docs.woocommerce.com/document/conditional-tags/.
  * @return bool
  */
-function starter_is_woocommerce_page() {
+function eurostar_is_woocommerce_page() {
 
 	if ( ! class_exists( 'WooCommerce' ) ) {
 
@@ -320,7 +320,7 @@ function starter_is_woocommerce_page() {
  *
  * @return void
  */
-function starter_custom_header_callback() {
+function eurostar_custom_header_callback() {
 
 	$id = '';
 
@@ -351,7 +351,7 @@ function starter_custom_header_callback() {
 
 }
 
-add_filter( 'http_request_args', 'starter_dont_update_theme', 5, 2 );
+add_filter( 'http_request_args', 'eurostar_dont_update_theme', 5, 2 );
 /**
  * Don't Update Theme.
  *
@@ -363,7 +363,7 @@ add_filter( 'http_request_args', 'starter_dont_update_theme', 5, 2 );
  *
  * @return array  request arguments
  */
-function starter_dont_update_theme( $request, $url ) {
+function eurostar_dont_update_theme( $request, $url ) {
 
 	 // Not a theme update request. Bail immediately.
 	if ( 0 !== strpos( $url, 'http://api.wordpress.org/themes/update-check' ) ) {
@@ -381,7 +381,7 @@ function starter_dont_update_theme( $request, $url ) {
 
 }
 
-add_action( 'init', 'starter_structural_wrap_hooks' );
+add_action( 'init', 'eurostar_structural_wrap_hooks' );
 /**
  * Add hooks immediately before and after Genesis structural wraps.
  *
@@ -393,7 +393,7 @@ add_action( 'init', 'starter_structural_wrap_hooks' );
  *
  * @return void
  */
-function starter_structural_wrap_hooks() {
+function eurostar_structural_wrap_hooks() {
 
 	$wraps = get_theme_support( 'genesis-structural-wraps' );
 

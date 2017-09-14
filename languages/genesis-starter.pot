@@ -1,8 +1,8 @@
-# Copyright (C) 2017 Genesis Starter
-# This file is distributed under the same license as the Genesis Starter package.
+# Copyright (C) 2017 Eurostar Theme
+# This file is distributed under the same license as the Eurostar Theme package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis Starter\n"
+"Project-Id-Version: Eurostar Theme\n"
 "Report-Msgid-Bugs-To: https://seothemes.com/support\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

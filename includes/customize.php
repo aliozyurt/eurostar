@@ -1,9 +1,9 @@
 <?php
 /**
- * This file adds customizer settings to the Genesis Starter theme.
+ * This file adds customizer settings to the Eurostar Theme theme.
  *
- * @package      Genesis Starter
- * @link         https://seothemes.com/themes/genesis-starter
+ * @package      Eurostar Theme
+ * @link         https://seothemes.com/themes/eurostar
  * @author       Seo Themes
  * @copyright    Copyright © 2017 Seo Themes
  * @license      GPL-2.0+
@@ -19,11 +19,11 @@ if ( ! defined( 'WPINC' ) ) {
 /*
  * Add any theme custom colors here.
  */
-$starter_colors = array(
+$eurostar_colors = array(
 	'primary' => '#b0b5ba',
 );
 
-add_action( 'customize_register', 'starter_customize_register' );
+add_action( 'customize_register', 'eurostar_customize_register' );
 /**
  * Sets up the theme customizer sections, controls, and settings.
  *
@@ -32,10 +32,10 @@ add_action( 'customize_register', 'starter_customize_register' );
  *
  * @return void
  */
-function starter_customize_register( $wp_customize ) {
+function eurostar_customize_register( $wp_customize ) {
 
 	// Globals.
-	global $wp_customize, $starter_colors;
+	global $wp_customize, $eurostar_colors;
 
 	/**
 	 * RGBA Color Picker Customizer Control
@@ -150,12 +150,12 @@ function starter_customize_register( $wp_customize ) {
 	 * register a customizer setting and control for each.
 	 * To add additional color settings, do not modify this
 	 * function, instead add your color name and hex value to
-	 * the $starter_colors` array at the start of this file.
+	 * the $eurostar_colors` array at the start of this file.
 	 */
-	foreach ( $starter_colors as $id => $rgba ) {
+	foreach ( $eurostar_colors as $id => $rgba ) {
 
 		// Format ID and label.
-		$setting = "starter_{$id}_color";
+		$setting = "eurostar_{$id}_color";
 		$label   = ucwords( str_replace( '_', ' ', $id ) ) . __( ' Color', 'starter-pro' );
 
 		// Add color setting.
@@ -194,19 +194,19 @@ function starter_customize_register( $wp_customize ) {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'starter_customizer_output', 100 );
+add_action( 'wp_enqueue_scripts', 'eurostar_customizer_output', 100 );
 /**
  * Output customizer styles.
  *
  * Checks the settings for the colors defined in the settings.
  * If any of these value are set the appropriate CSS is output.
  *
- * @var   array $starter_colors Global theme colors.
+ * @var   array $eurostar_colors Global theme colors.
  */
-function starter_customizer_output() {
+function eurostar_customizer_output() {
 
 	// Set in customizer-settings.php.
-	global $starter_colors;
+	global $eurostar_colors;
 
 	/**
 	 * Loop though each color in the global array of theme colors
@@ -214,11 +214,11 @@ function starter_customizer_output() {
 	 * way of creating multiple variables that we can reuse. The
 	 * benefit of using a foreach loop over creating each variable
 	 * manually is that we can just declare the colors once in the
-	 * `$starter_colors` array, and they can be used in multiple ways.
+	 * `$eurostar_colors` array, and they can be used in multiple ways.
 	 */
-	foreach ( $starter_colors as $id => $hex ) {
+	foreach ( $eurostar_colors as $id => $hex ) {
 
-		${"$id"} = get_theme_mod( "starter_{$id}_color",  $hex );
+		${"$id"} = get_theme_mod( "eurostar_{$id}_color",  $hex );
 
 	}
 
@@ -233,7 +233,7 @@ function starter_customizer_output() {
 	 * the user from the theme customizer. If the theme mod is not
 	 * equal to the default color then the string is appended to $css.
 	 */
-	$css .= ( $starter_colors['primary'] !== $primary ) ? sprintf( '
+	$css .= ( $eurostar_colors['primary'] !== $primary ) ? sprintf( '
 
 		.button:hover,
 		button:hover,
@@ -265,7 +265,7 @@ function starter_customizer_output() {
 	if ( ! empty( $css ) ) {
 
 		// Add the inline styles, also minify CSS first.
-		wp_add_inline_style( $handle, starter_minify_css( $css ) );
+		wp_add_inline_style( $handle, eurostar_minify_css( $css ) );
 
 	}
 

@@ -1,9 +1,9 @@
 <?php
 /**
- * Genesis Starter Theme.
+ * Eurostar Theme Theme.
  *
- * @package      Genesis Starter
- * @link         https://seothemes.com/themes/genesis-starter
+ * @package      Eurostar Theme
+ * @link         https://seothemes.com/themes/eurostar
  * @author       Seo Themes
  * @copyright    Copyright © 2017 Seo Themes
  * @license      GPL-2.0+
@@ -20,12 +20,12 @@ if ( ! defined( 'WPINC' ) ) {
 include_once( get_template_directory() . '/lib/init.php' );
 
 // Define theme constants.
-define( 'CHILD_THEME_NAME', 'Genesis Starter' );
-define( 'CHILD_THEME_URL', 'https://seothemes.com/themes/genesis-starter' );
+define( 'CHILD_THEME_NAME', 'Eurostar Theme' );
+define( 'CHILD_THEME_URL', 'https://seothemes.com/themes/eurostar' );
 define( 'CHILD_THEME_VERSION', '2.2.1' );
 
 // Set Localization (do not remove).
-load_child_theme_textdomain( 'genesis-starter', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'genesis-starter' ) );
+load_child_theme_textdomain( 'eurostar', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'eurostar' ) );
 
 // Remove secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
@@ -90,8 +90,8 @@ add_theme_support( 'genesis-accessibility', array(
 
 // Enable custom navigation menus.
 add_theme_support( 'genesis-menus' , array(
-	'primary'   => __( 'Header Menu', 'genesis-starter' ),
-	'secondary' => __( 'After Header Menu', 'genesis-starter' ),
+	'primary'   => __( 'Header Menu', 'eurostar' ),
+	'secondary' => __( 'After Header Menu', 'eurostar' ),
 ) );
 
 // Enable viewport meta tag for mobile browsers.
@@ -160,7 +160,7 @@ add_theme_support( 'custom-header', array(
 	'flex-width'         => true,
 	'uploads'            => true,
 	'video'              => true,
-	'wp-head-callback'   => 'starter_custom_header_callback',
+	'wp-head-callback'   => 'eurostar_custom_header_callback',
 ) );
 
 // Register default header (just in case).
@@ -168,43 +168,43 @@ register_default_headers( array(
 	'child' => array(
 		'url'           => '%2$s/assets/images/hero.jpg',
 		'thumbnail_url' => '%2$s/assets/images/hero.jpg',
-		'description'   => __( 'Hero Image', 'genesis-starter' ),
+		'description'   => __( 'Hero Image', 'eurostar' ),
 	),
 ) );
 
 // Register a custom layout.
 genesis_register_layout( 'custom-layout', array(
-	'label' => __( 'Custom Layout', 'genesis-starter' ),
+	'label' => __( 'Custom Layout', 'eurostar' ),
 	'img'   => get_stylesheet_directory_uri() . '/assets/images/custom-layout.gif',
 ) );
 
 // Register front page widget areas.
 genesis_register_sidebar( array(
 	'id'           => 'front-page-1',
-	'name'         => __( 'Front Page 1', 'genesis-starter' ),
-	'description'  => __( 'Front page 1 widget area.', 'genesis-starter' ),
+	'name'         => __( 'Front Page 1', 'eurostar' ),
+	'description'  => __( 'Front page 1 widget area.', 'eurostar' ),
 	'before_title' => '<h1 itemprop="headline">',
 	'after_title'  => '</h1>',
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-2',
-	'name'        => __( 'Front Page 2', 'genesis-starter' ),
-	'description' => __( 'Front page 2 widget area.', 'genesis-starter' ),
+	'name'        => __( 'Front Page 2', 'eurostar' ),
+	'description' => __( 'Front page 2 widget area.', 'eurostar' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-3',
-	'name'        => __( 'Front Page 3', 'genesis-starter' ),
-	'description' => __( 'Front page 3 widget area.', 'genesis-starter' ),
+	'name'        => __( 'Front Page 3', 'eurostar' ),
+	'description' => __( 'Front page 3 widget area.', 'eurostar' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-4',
-	'name'        => __( 'Front Page 4', 'genesis-starter' ),
-	'description' => __( 'Front page 4 widget area.', 'genesis-starter' ),
+	'name'        => __( 'Front Page 4', 'eurostar' ),
+	'description' => __( 'Front page 4 widget area.', 'eurostar' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-5',
-	'name'        => __( 'Front Page 5', 'genesis-starter' ),
-	'description' => __( 'Front page 5 widget area.', 'genesis-starter' ),
+	'name'        => __( 'Front Page 5', 'eurostar' ),
+	'description' => __( 'Front page 5 widget area.', 'eurostar' ),
 ) );
 
 /**
@@ -212,10 +212,10 @@ genesis_register_sidebar( array(
  *
  * @return void
  */
-function starter_scripts_styles() {
+function eurostar_scripts_styles() {
 
 	// Conditionally load WooCommerce styles.
-	if ( starter_is_woocommerce_page() ) {
+	if ( eurostar_is_woocommerce_page() ) {
 		wp_enqueue_style( 'starter-woocommerce', get_stylesheet_directory_uri() . '/assets/styles/min/woocommerce.min.css', array(), CHILD_THEME_VERSION );
 	}
 
@@ -230,8 +230,8 @@ function starter_scripts_styles() {
 
 	// Localize responsive menus script.
 	wp_localize_script( 'starter-menus', 'genesis_responsive_menu', array(
-		'mainMenu'         => __( 'Menu', 'genesis-starter' ),
-		'subMenu'          => __( 'Menu', 'genesis-starter' ),
+		'mainMenu'         => __( 'Menu', 'eurostar' ),
+		'subMenu'          => __( 'Menu', 'eurostar' ),
 		'menuIconClass'    => null,
 		'subMenuIconClass' => null,
 		'menuClasses'      => array(
@@ -242,7 +242,7 @@ function starter_scripts_styles() {
 		),
 	) );
 }
-add_action( 'wp_enqueue_scripts', 'starter_scripts_styles', 999 );
+add_action( 'wp_enqueue_scripts', 'eurostar_scripts_styles', 999 );
 
 // Load helper functions.
 include_once( get_stylesheet_directory() . '/includes/helpers.php' );

@@ -1,25 +1,25 @@
 <?php
 /**
- * Genesis Starter.
+ * Eurostar Theme.
  *
- * This file adds the landing page template to the Genesis Starter Theme.
+ * This file adds the landing page template to the Eurostar Theme Theme.
  *
  * Template Name: Landing Page
  *
- * @package Genesis Starter
+ * @package Eurostar Theme
  * @author  SeoThemes
  * @license GPL-2.0+
- * @link    https://seothemes.com/themes/genesis-starter
+ * @link    https://seothemes.com/themes/eurostar
  */
 
-add_filter( 'body_class', 'starter_add_body_class' );
+add_filter( 'body_class', 'eurostar_add_body_class' );
 /**
  * Add landing page body class to the head.
  *
  * @param  array $classes Array of body classes.
  * @return array $classes Array of body classes.
  */
-function starter_add_body_class( $classes ) {
+function eurostar_add_body_class( $classes ) {
 
 	$classes[] = 'landing-page';
 
@@ -27,13 +27,13 @@ function starter_add_body_class( $classes ) {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'starter_dequeue_skip_links' );
+add_action( 'wp_enqueue_scripts', 'eurostar_dequeue_skip_links' );
 /**
  * Dequeue Skip Links Script.
  *
  * @return void
  */
-function starter_dequeue_skip_links() {
+function eurostar_dequeue_skip_links() {
 
 	wp_dequeue_script( 'skip-links' );
 
@@ -51,9 +51,9 @@ remove_action( 'genesis_header', 'genesis_do_header' );
 remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 
 // Remove default page header.
-remove_action( 'genesis_after_header', 'starter_page_header_open', 20 );
-remove_action( 'genesis_after_header', 'starter_page_header_title', 24 );
-remove_action( 'genesis_after_header', 'starter_page_header_close', 28 );
+remove_action( 'genesis_after_header', 'eurostar_page_header_open', 20 );
+remove_action( 'genesis_after_header', 'eurostar_page_header_title', 24 );
+remove_action( 'genesis_after_header', 'eurostar_page_header_close', 28 );
 
 // Add title back (removed in /includes/header.php).
 add_action( 'genesis_entry_header', 'genesis_do_post_title' );

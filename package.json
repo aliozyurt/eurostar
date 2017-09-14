@@ -1,7 +1,7 @@
 {
-  "name": "genesis-starter",
+  "name": "eurostar",
   "version": "2.1.0",
-  "description": "The Genesis Starter theme for the Genesis Framework.",
+  "description": "The Eurostar Theme theme for the Genesis Framework.",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^6.3.1",
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seothemes/genesis-starter"
+    "url": "git+https://github.com/seothemes/eurostar"
   },
   "keywords": [
     "theme"
@@ -45,7 +45,7 @@
   "author": "SeoThemes",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/seothemes/genesis-starter/issues"
+    "url": "https://github.com/seothemes/eurostar/issues"
   },
-  "homepage": "https://github.com/seothemes/genesis-starter"
+  "homepage": "https://github.com/seothemes/eurostar"
 }

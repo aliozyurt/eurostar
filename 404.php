@@ -1,25 +1,25 @@
 <?php
 /**
- * Genesis Starter.
+ * Eurostar Theme.
  *
- * This file adds the 404 page template to the Genesis Starter Theme.
+ * This file adds the 404 page template to the Eurostar Theme Theme.
  *
- * @package Genesis Starter
+ * @package Eurostar Theme
  * @author  SeoThemes
  * @license GPL-2.0+
- * @link    https://seothemes.com/themes/genesis-starter/
+ * @link    https://seothemes.com/themes/eurostar/
  */
 
 // Remove default loop.
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
-add_action( 'genesis_loop', 'starter_404' );
+add_action( 'genesis_loop', 'eurostar_404' );
 /**
  * This function outputs a 404 "Not Found" error message.
  *
  * @since 1.6
  */
-function starter_404() {
+function eurostar_404() {
 
 	genesis_markup( array(
 		'open' => '<article class="entry">',
@@ -36,7 +36,7 @@ function starter_404() {
 
 	get_search_form();
 
-	echo '<h2>' . __( 'Sitemap', 'genesis-starter' ) . '</h2>';
+	echo '<h2>' . __( 'Sitemap', 'eurostar' ) . '</h2>';
 
 	genesis_sitemap( 'h3' );
 
